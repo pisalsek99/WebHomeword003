@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 900px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .profile-card {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .profile-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .rating {
+            font-size: 18px;
+            color: gold;
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .info {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .small {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .small-images {
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .small-images img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card profile-card">
+            <img src="profile.jpg" alt="Profile">
+            <div>
+                <strong>Arun Lita</strong>
+                <p>Siem Reap</p>
+            </div>
+            <span class="rating">4.5 ⭐⭐⭐⭐</span>
+        </div>
+        <div class="card image-card">
+            <img src="beach.jpg" alt="Beach View">
+            <div class="info">
+                <p>Beach View</p>
+                <small>Philippines ⭐ 4.0</small>
+            </div>
+        </div>
+        <div class="card image-card">
+            <img src="sunset.jpg" alt="Sunset View">
+            <div class="info">
+                <p>Sunset View</p>
+                <small>USA ⭐ 5.0</small>
+            </div>
+        </div>
+        <div class="card small">
+            <p>Let's have a cup of coffee together</p>
+            <div class="small-images">
+                <img src="https://i.pinimg.com/236x/09/00/40/090040eaf7fbd6c11727acd0524bc5f2.jpg" alt="Coffee 1">
+                <img src="https://i.pinimg.com/236x/09/00/40/090040eaf7fbd6c11727acd0524bc5f2.jpg" alt="Coffee 2">
+                <img src="https://i.pinimg.com/236x/09/00/40/090040eaf7fbd6c11727acd0524bc5f2.jpg" alt="Coffee 3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
